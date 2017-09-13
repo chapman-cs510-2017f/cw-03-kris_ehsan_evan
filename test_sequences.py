@@ -15,5 +15,5 @@ def test_2():
 def test_3():
   my_list=fibonacci(10);
   result=my_list[-1];
-  correct=34;
+  correct=30;
   assert result == correct;
