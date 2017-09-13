@@ -1,0 +1,16 @@
+import sequences.py
+
+def test_1():
+  result=sequences.fibonacci(1);
+  correct = [0];
+  assert result == correct;
+  
+def test_2():
+  result=sequences.fibonacci(2);
+  correct = [0,1];
+  assert result == correct;
+  
+def test_3():
+  result=sequences.fibonacci(5);
+  correct = [0,1,1,2,3];
+  assert result == correct;
