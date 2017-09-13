@@ -1,11 +1,15 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+
+
+
 def fibonacci(n):
-    if(n <= 1):
-        return n
-    else:
-        return(fibonacci(n-1) + fibonacci(n-2))
-n = int(input("Enter number of terms:"))
-my_list = []
-for i in range(n):
-    x = fibonacci(i)
-    my_list.append(x)
-print(my_list)
+    my_list = []
+    a,b = 0,1
+    for i in range(n-1):
+        a,b = b,a+b
+        my_list.append(a)
+    #print(my_list)
+    return my_list    #was return a
+
+fibonacci(10)
