@@ -15,13 +15,11 @@ def fibonacci(n):
                 a,b = b,a+b
                 my_list.append(a)
             #print(my_list)
-            return my_list    #was return a
+            return my_list
         except Exception:
             print("ERROR:invalid input recieved for fibonacci(n), expect integer")
             count=count+1
             continue
-
-
 
 
 #fibonacci(10.3333333)
