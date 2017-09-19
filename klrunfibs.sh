@@ -28,7 +28,7 @@ write_fibs.csv.bak () {
     cp fib.csv fib.csv.bak
     for i in {1..$1}
     do
-        print python fib.py $1 | paste -sd ',' >> fibs.csv
+        print python fib.py $1 | paste -sd ',' >> fibs.csv #####error here, writes to csv but error from fib.py
         #python fib.py $1 >> fibs.csv
     done
 }
