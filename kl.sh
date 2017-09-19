@@ -17,7 +17,7 @@
 
     if [ $1 -le 100000 ] && [ $1 -ge 1 ]
     then
-        ech valid input
+        echo valid input
         return 0
     else
         echo $1 Error:invalid input. Enter integer from 1 to 10,000.
