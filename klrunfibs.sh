@@ -13,14 +13,6 @@
 
 
 
-################ main code ################
-if [  valid_input $1 ]
-then
-    csv_exists
-    echo thenstmt
-else
-    echo elsestmt
-fi
 
 
 
@@ -79,3 +71,14 @@ bak_exists () {
         return 0
     fi
 }
+
+
+
+################ main code ################
+if [  valid_input $1 ]
+then
+    csv_exists
+    echo thenstmt
+else
+    echo elsestmt
+fi
