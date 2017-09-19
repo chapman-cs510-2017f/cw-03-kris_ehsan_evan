@@ -25,10 +25,11 @@ write_fibs.csv () {
 }
 
 write_fibs.csv.bak () {
+    cp fib.csv fib.csv.bak
     for i in {1..$1}
     do
-        cp fib.csv fib.csv.bak
-        python fib.py $1 >> fibs.csv
+        print python fib.py $1 | paste -sd ',' >> fibs.csv
+        #python fib.py $1 >> fibs.csv
     done
 }
 
@@ -68,6 +69,7 @@ bak_exists () {
         echo Existing fibs.csv saved as fibs.csv.bak \nfibs.csv overwritten
         cp fibs.csv fibs.csv.bak
         write_fibs.csv
+        echo asdf
         return 0
     fi
 }
