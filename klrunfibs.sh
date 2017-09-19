@@ -75,7 +75,7 @@ bak_exists () {
 
 
 ################ main code ################
-input = valid_input $1
+input=valid_input $1
 if $input; then
     csv_exists
     echo thenstmt
