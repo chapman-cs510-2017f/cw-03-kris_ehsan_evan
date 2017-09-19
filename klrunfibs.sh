@@ -22,7 +22,7 @@ done
 write_fibs.csv () {
     for i in {1..$1}
     do
-        python fib.py $1 >> fibs.csv
+        python ./fib.py $1 >> fibs.csv
     done
 }
 
@@ -37,7 +37,7 @@ write_fibs.csv.bak () {
 ################ argument 1:10000 ################
 ##################################################
 valid_input ($1) {
-    if [ $1 -le 100000 && $1 -ge 1 ]
+    if [ $1 -le 100000 ] && [ $1 -ge 1 ]
     then
         return 0
     else
