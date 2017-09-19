@@ -14,13 +14,16 @@
 
 
 
-
+valid_input() {
     if [ $1 -le 100000 ] && [ $1 -ge 1 ]
     then
         echo valid input
         return 0
     else
         echo $1 Error:invalid input. Enter integer from 1 to 10,000.
-        #ask for input again?
+        #ask for input again?reu
         return 1
     fi
+}
+
+valid_input $1
