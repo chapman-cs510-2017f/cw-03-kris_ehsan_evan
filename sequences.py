@@ -17,7 +17,7 @@ def fibonacci(n):
             #print(my_list)
             return my_list
         except Exception:
-            print("ERROR:invalid input recieved for fibonacci(n), expect integer")
+            print("ERROR:invalid input recieved for fibonacci(n), expect positive integer")
             count=count+1
             continue
 
