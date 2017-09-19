@@ -5,6 +5,6 @@
 import fib
 
 def test_fib():
-    result =fib.main(10);
-    correct=55;
+    result =fib.main(5);
+    correct=5;
     assert result == correct;
