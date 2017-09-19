@@ -14,9 +14,11 @@
 
 
 ################ main code ################
-while [  valid_input $1 ]; do
+if [  valid_input $1 ]
+then
     csv_exists
-done
+else
+fi
 
 
 
