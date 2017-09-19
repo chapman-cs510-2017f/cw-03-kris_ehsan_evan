@@ -11,8 +11,10 @@
                 #do not overwrite file
                 #exit program
 
+
+
 ################ main code ################
-while [  valid_input($1) ]; do
+while [  valid_input $1 ]; do
     csv_exists
 done
 
@@ -36,7 +38,7 @@ write_fibs.csv.bak () {
 
 ################ argument 1:10000 ################
 ##################################################
-valid_input ($1) {
+valid_input () {
     if [ $1 -le 100000 ] && [ $1 -ge 1 ]
     then
         return 0
