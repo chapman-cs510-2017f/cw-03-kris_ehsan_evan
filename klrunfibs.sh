@@ -17,7 +17,9 @@
 if [  valid_input $1 ]
 then
     csv_exists
+    echo thenstmt
 else
+    echo elsestmt
 fi
 
 
