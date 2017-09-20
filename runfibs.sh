@@ -1,29 +1,26 @@
 #!/bin/bash
- 
-if [ -e "fibs.csv" ]
+
+if [ -e "fibs.csv" ]
 then
-    if [ -e "fibs.csv.bak" ]
-    then
-        echo Error: fibs.csv and fibs.csv.bak exists. Output not saved to file.
-        exit 1
+    if [ -e "fibs.csv.bak" ]
+    then
+        echo "Error: fibs.csv and fibs.csv.bak exists. Output not saved to file."
+        exit 1
     else
-        echo Existing fibs.csv saved as fibs.csv.bak. fibs.csv overwritten
-        cp fibs.csv fibs.csv.bak
-        for i in $(seq $1);
+        echo "Existing fibs.csv saved as fibs.csv.bak. fibs.csv overwritten."
+        cp fibs.csv fibs.csv.bak
+        for i in $(seq $1);
         do
-            echo -n "$(./fib.py $i)," >> fibs.csv
+            echo -n "$(./fib.py $i)," >> fibs.csv
         done
     fi
 else
-    for i in $(seq $1);
+    for i in $(seq $1);
     do
-            echo -n "$(./fib.py $i)," >> fibs.csv
+        echo -n "$(./fib.py $i)," >> fibs.csv
     done
 fi
- 
- 
- 
- 
+
 #touch  "fibs.csv"
  
 #for i in $(seq $1);
