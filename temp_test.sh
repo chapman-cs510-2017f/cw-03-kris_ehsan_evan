@@ -2,7 +2,7 @@
 
 touch  "fibs.csv"
  
-for i in $(seq 10000);
+for i in $(seq $1);
 do
-    ./fib.py $i >> fibs.csv
+    ./fib.py $i | paste -sd ',' >> fibs.csv
 done
