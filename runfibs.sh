@@ -1,8 +1,10 @@
 #!/bin/bash
 
-if [ -e fibs.csv ]                  
+
+
+if [ -f fibs.csv ]                  
 then
-    if [ -e fibs.csv.bak ]              
+    if [ -f fibs.csv.bak ]              
     then                            
         echo Error: fibs.csv and fibs.csv.bak exists. Output not saved to file.
         exit 1
